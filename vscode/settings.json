@@ -18,9 +18,9 @@
     "editor.defaultFormatter": "biomejs.biome"
   },
 
-  // TypeScript
-  "typescript.updateImportsOnFileMove.enabled": "always",
-  "typescript.inlayHints.parameterNames.enabled": "literals",
+  // JS/TS
+  "js/ts.updateImportsOnFileMove.enabled": "always",
+  "js/ts.inlayHints.parameterNames.enabled": "literals",
 
   // Workbench
   "workbench.colorTheme": "Bearded Theme Arc",
