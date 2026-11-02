@@ -1,0 +1,34 @@
+[
+  // Toggle focus between editor and terminal
+  {
+    "key": "alt+backspace",
+    "command": "workbench.action.terminal.focus",
+    "when": "!terminalFocus"
+  },
+  {
+    "key": "alt+backspace",
+    "command": "workbench.action.focusActiveEditorGroup",
+    "when": "terminalFocus"
+  },
+
+  // Newline in Claude Code (terminal)
+  {
+    "key": "shift+enter",
+    "command": "workbench.action.terminal.sendSequence",
+    "args": { "text": "\u001b\r" },
+    "when": "terminalFocus"
+  },
+
+  // Quick text search
+  {
+    "key": "ctrl+k ctrl+f",
+    "command": "workbench.action.quickTextSearch"
+  },
+
+  // Comment line (Nordic layout friendly)
+  {
+    "key": "ctrl+numpad_divide",
+    "command": "editor.action.commentLine",
+    "when": "editorTextFocus && !editorReadonly"
+  }
+]

@@ -1,0 +1,56 @@
+{
+  // Editor
+  "editor.fontFamily": "JetBrains Mono, Consolas, monospace",
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.biome": "explicit",
+    "source.organizeImports.biome": "explicit"
+  },
+  "editor.wordWrap": "on",
+  "editor.linkedEditing": true,
+  "editor.stickyScroll.enabled": true,
+  "editor.guides.bracketPairs": true,
+  "editor.suggestSelection": "first",
+  "editor.unicodeHighlight.ambiguousCharacters": false,
+
+  // Formatters
+  "[javascript][typescript][javascriptreact][typescriptreact][json][jsonc][css][graphql]": {
+    "editor.defaultFormatter": "biomejs.biome"
+  },
+
+  // TypeScript
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "typescript.inlayHints.parameterNames.enabled": "literals",
+
+  // Workbench
+  "workbench.colorTheme": "Bearded Theme Arc",
+  "workbench.colorCustomizations": {
+    "[Bearded Theme Arc]": {
+      "commandCenter.foreground": "#afbbd2",
+      "commandCenter.border": "#2e3b54",
+      "titleBar.activeForeground": "#afbbd2"
+    }
+  },
+  "workbench.editor.labelFormat": "short",
+  "window.commandCenter": true,
+  "update.showReleaseNotes": false,
+
+  // Explorer
+  "explorer.compactFolders": false,
+  "explorer.confirmDelete": false,
+  "explorer.confirmDragAndDrop": false,
+
+  // Git
+  "git.autofetch": true,
+  "git.confirmSync": false,
+  "githubPullRequests.pullBranch": "never",
+  "githubPullRequests.createOnPublishBranch": "never",
+
+  // AI
+  "chat.disableAIFeatures": true,
+  "claudeCode.useTerminal": true,
+
+  // Terminal / remote
+  "terminal.integrated.initialHint": false,
+  "remote.autoForwardPortsSource": "hybrid"
+}
