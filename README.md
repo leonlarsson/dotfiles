@@ -4,29 +4,18 @@ Personal config, stored for reference. Nothing is linked or auto-applied.
 
 ## VS Code
 
-```
-vscode/
-├─ settings.json
-├─ keybindings.json
-├─ extensions.txt
-└─ snippets/
-   └─ clog.code-snippets
-```
+`vscode/Personal.code-profile`: full profile export (settings, keybindings, snippets, extensions).
 
-### Restore into a new profile
+### Restore
 
-1. Command Palette → **Profiles: New Profile** → name it, **Copy from: None**.
-2. With that profile active:
-   - **Preferences: Open User Settings (JSON)** → paste `settings.json`
-   - **Preferences: Open Keyboard Shortcuts (JSON)** → paste `keybindings.json`
-   - **Snippets: Configure Snippets** → **New Global Snippets file** → name it `clog` → paste the snippet file
-3. Install extensions (PowerShell, from this folder):
+1. Command Palette → **Profiles: Import Profile...** → **Select File...** → `Personal.code-profile` → **Create**.
+2. Switch to the profile.
+3. In a WSL window, run **Install Local Extensions in 'WSL: Ubuntu'...** and select all.
+4. Reload the window.
 
-   ```powershell
-   Get-Content vscode/extensions.txt | % { code --profile "<ProfileName>" --install-extension $_ }
-   ```
+### Update
 
-4. Open a WSL window and click **Install in WSL** on any extension that asks.
+Profiles → Personal → `...` → **Export** → overwrite `vscode/Personal.code-profile` → commit.
 
 ### Per-repo extensions (Go, Python, etc.)
 
@@ -43,7 +32,3 @@ Python: `["ms-python.python", "charliermarsh.ruff"]`, plus in `.vscode/settings.
 ```json
 { "[python]": { "editor.defaultFormatter": "charliermarsh.ruff" } }
 ```
-
-### Updating
-
-When settings change in VS Code, copy them back here and commit. The profile is the live copy; this repo is the snapshot.
